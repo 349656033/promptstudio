@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PromptStudio</title>
+    <meta
+      name="description"
+      content="Kobo-friendly AI website generator built with Cloudflare Pages."
+    />
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <main>
+      <section class="hero">
+        <span class="eyebrow">PromptStudio</span>
+        <h1>Generate a website from a prompt.</h1>
+        <p class="subtitle">
+          Use this simple generator to create a landing page blueprint, product pitch,
+          or small-site concept for your next idea.
+        </p>
+      </section>
+
+      <section class="panel">
+        <form id="generate-form">
+          <label for="prompt">Describe the website you want</label>
+          <textarea
+            id="prompt"
+            name="prompt"
+            placeholder="Example: Create a modern landing page for a K-12 reading app for parents."
+          ></textarea>
+
+          <div class="actions">
+            <button id="submit-btn" type="submit">Generate</button>
+            <span id="status" class="status">Ready</span>
+          </div>
+        </form>
+
+        <div id="output" class="output">Your AI-generated website content will appear here.</div>
+      </section>
+    </main>
+
+    <script src="/app.js"></script>
+  </body>
+</html>
