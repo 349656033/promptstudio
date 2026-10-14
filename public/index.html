@@ -17,26 +17,45 @@
         <h1>Generate a website from a prompt.</h1>
         <p class="subtitle">
           Use this simple generator to create a landing page blueprint, product pitch,
-          or small-site concept for your next idea.
+          or small-site concept for your next idea. Designed to work well on Kobo browsers.
         </p>
       </section>
 
-      <section class="panel">
-        <form id="generate-form">
-          <label for="prompt">Describe the website you want</label>
-          <textarea
-            id="prompt"
-            name="prompt"
-            placeholder="Example: Create a modern landing page for a K-12 reading app for parents."
-          ></textarea>
+      <section class="panel layout">
+        <div class="left">
+          <form id="generate-form">
+            <label for="prompt">Describe the website you want</label>
+            <textarea
+              id="prompt"
+              name="prompt"
+              placeholder="Example: Create a modern landing page for a K-12 reading app for parents."
+            ></textarea>
 
-          <div class="actions">
-            <button id="submit-btn" type="submit">Generate</button>
-            <span id="status" class="status">Ready</span>
-          </div>
-        </form>
+            <div class="actions">
+              <button id="submit-btn" type="submit">Generate</button>
+              <button id="cancel-btn" type="button" disabled>Cancel</button>
+              <button id="save-btn" type="button">Save</button>
+              <span id="status" class="status">Ready</span>
+            </div>
 
-        <div id="output" class="output">Your AI-generated website content will appear here.</div>
+            <div class="progress-wrap" aria-hidden="false">
+              <div id="progress" class="progress-bar" style="width:0%"></div>
+              <div id="eta" class="eta"></div>
+            </div>
+
+            <div class="preview-actions">
+              <button id="preview-btn" type="button">Fullscreen Preview</button>
+              <button id="download-btn" type="button">Download</button>
+            </div>
+          </form>
+
+          <div id="output" class="output">Your AI-generated website content will appear here.</div>
+        </div>
+
+        <aside class="right panel-small">
+          <h3>Saved Projects</h3>
+          <div id="projects" class="projects-list"></div>
+        </aside>
       </section>
     </main>
 
